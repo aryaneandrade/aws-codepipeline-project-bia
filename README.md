@@ -25,7 +25,7 @@ O fluxo de CI/CD foi dividido em dois cenários principais:
 
 Diagrama de arquitetura:
 
-![Arquitetura CI/CD](./images/arquitetura-cicd.png)
+![Arquitetura CI/CD](./assets/arquitetura.png)
 
 ---
 
@@ -44,23 +44,7 @@ Diagrama de arquitetura:
 
 ## 🔎 Cenários Desenvolvidos
 
-### 1️⃣ Pipeline para Elastic Beanstalk
-
-**Descrição:** Deploy de uma aplicação Node.js utilizando o **Elastic Beanstalk**, uma plataforma PaaS gerenciada da AWS.
-
-**Fluxo de execução:**
-
-- Monitoramento de alterações no GitHub (branch principal)
-- Build no **AWS CodeBuild**
-- Deploy automático no ambiente Elastic Beanstalk
-
-📸 Exemplo de execução:
-
-![Pipeline Elastic Beanstalk](./images/pipeline-beanstalk.png)
-
----
-
-### 2️⃣ Pipeline para Amazon ECS (EC2)
+### 1️⃣ Pipeline para Amazon ECS (EC2)
 
 **Descrição:** Deploy de uma aplicação containerizada em um **Cluster ECS com instâncias EC2**.
 
@@ -71,9 +55,30 @@ Diagrama de arquitetura:
 - Push da imagem para o **Amazon ECR**
 - Deploy automatizado no ECS
 
-📸 Exemplo de execução:
+📸 Pipeline em Execução - Status das Etapas:
 
-![Pipeline ECS](./images/pipeline-ecs.png)
+![Pipeline](./assets/pipeline.png)
+
+📸 Aplicação:
+
+![ ECS](./assets/ECS.png)
+
+---
+
+### 2️⃣ Pipeline para Elastic Beanstalk
+
+**Descrição:** Deploy de uma aplicação Node.js utilizando o **Elastic Beanstalk**, uma plataforma PaaS gerenciada da AWS.
+
+**Fluxo de execução:**
+
+- Monitoramento de alterações no GitHub (branch principal)
+- Build no **AWS CodeBuild**
+- Deploy automático no ambiente Elastic Beanstalk
+
+📸 Aplicação:
+
+![ Beanstalk](./assets/beanstalk.png)
+
 
 ---
 
@@ -88,13 +93,9 @@ Diagrama de arquitetura:
 
 ## 📸 Galeria de Execuções
 
-| Elastic Beanstalk | ECS com EC2 |
+| Build no CodeBuild | Histórico de Execuções |
 |---|---|
-| ![Execução Beanstalk](./images/execucao-beanstalk.png) | ![Execução ECS](./images/execucao-ecs.png) |
-
-| Build no CodeBuild | Deploy no ECS |
-|---|---|
-| ![Build CodeBuild](./images/codebuild.png) | ![Deploy ECS](./images/deploy-ecs.png) |
+| ![Build CodeBuild](./assets/codebuild.png) | ![Deploy ECS](./assets/builds.png) |
 
 ---
 
